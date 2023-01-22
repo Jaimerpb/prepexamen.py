@@ -5,7 +5,7 @@ def do_math(numbers_string: str) -> int:
     numbers = numbers_string.split()    #Utilizamos el metodo split para separar la cadena de entrada en una lista de números utilizando el espacio como separador.     
     letters_dict = {}
     for number in numbers:
-        letter = re.search("[a-zA-Z]", number).group()
+        letter = re.search("[a-zA-Z]", number).group()#Utilizamos el metodo search para buscar la primera ocurrencia de una letra en el número.
         int_number = int(''.join(filter(str.isdigit, number))) 
         if letter in letters_dict:
             letters_dict[letter].append(int_number)
